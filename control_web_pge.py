@@ -1,3 +1,11 @@
+'''
+Written in haste. 
+There are two methods used for the timing, a standard sleep.time and 
+WebDriver Wait method. The latter is more elegant but I haven't changed all the time.sleep(web_page_time) implementations.
+
+'''
+
+
 # Import the pandas library
 import pandas as pd
 from selenium import webdriver
@@ -26,13 +34,13 @@ def set_up():
     settings_button = browser.find_element("id", "tab-settings")
     settings_button.click()
     time.sleep(web_page_time)
+# Select the vram usage to low
     select = Select(browser.find_element("id",'vram_usage_level'))
     time.sleep(web_page_time)
     select.select_by_value('low')
     time.sleep(web_page_time)
 # Turn on the auto save images toggle
-    settings_save = browser.find_element(By.XPATH, '//*[@id="save_to_disk"]')
-    
+    settings_save = browser.find_element(By.XPATH, '//*[@id="save_to_disk"]') 
     time.sleep(web_page_time)
 # Select the auto save option
     if settings_save.is_selected() == False:
@@ -41,10 +49,8 @@ def set_up():
         browser.execute_script("arguments[0].click();", settings_save)
 
     time.sleep(web_page_time)
-    #elem=WebDriverWait(browser,50).until(EC.visibility_of_element_located((By.ID, "save_to_disk")))
-    #browser.execute_script("arguments[0].scrollIntoView();",elem)
-    #elem.click()
-# Go to the main window and set up the values
+
+# Go to the main Generate window and set up the values
     settings_button = browser.find_element("id", "tab-main")
     settings_button.click()
     time.sleep(web_page_time)
@@ -78,13 +84,13 @@ def set_up():
         browser.execute_script("arguments[0].click();", settings_face)
 
 
-# Main Body
+# Main Body starts here
 browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 browser.get("http://localhost:9000/")
-#browser.get('http://www.agentsimon.co.uk/')
 browser.maximize_window()
-
+# Run the set up function
 set_up()
+
 prompt_name ="walking the streets of Hanoi"
 prompt_name = prompt_name + " 2023"
 print("Prompt is ", prompt_name)
@@ -94,6 +100,7 @@ input.send_keys(prompt_name)
 # clicking on the Make image button
 button = browser.find_element("id","makeImage")
 button.click()
+# Wait for the image to be made which will be auto saved
 time.sleep(process_time)
 print("We have finished")
 browser.close()
