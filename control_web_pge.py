@@ -17,6 +17,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+
 import time
 import os
 import subprocess
@@ -46,10 +48,7 @@ def set_up():
     time.sleep(web_page_time)
 # Select the auto save option
     if settings_save.is_selected() == False:
-        #print("We have the settings save button")
-        #print("Location: ", settings_save.location)
         browser.execute_script("arguments[0].click();", settings_save)
-
     time.sleep(web_page_time)
 
 # Go to the main Generate window and set up the values
@@ -85,14 +84,10 @@ def set_up():
 # Turn on fix faces toggle
     settings_save = browser.find_element(By.XPATH, '//*[@id="use_face_correction"]') 
     time.sleep(web_page_time)
-    # Select the auto save option
-    if settings_save.is_selected() == False:
-        #print("We have the settings save button")
-        #print("Location: ", settings_save.location)
-        browser.execute_script("arguments[0].click();", settings_save)
 # identify dropdown for image type and select
     select = Select(WebDriverWait(browser, 2).until(EC.element_to_be_clickable((By.ID, "output_format"))))
     select.select_by_visible_text("jpeg")
+
 
 # Set the image size width
     select = Select(WebDriverWait(browser, 2).until(EC.element_to_be_clickable((By.ID, "width"))))
@@ -125,7 +120,7 @@ print("Number of rows ",count_row)
 #for model_image in range(count_row):
 for model_image in range(count_row):
     print(model_image)
-    prompt_name ="male traditional costume"
+    prompt_name ="main airport"
     print("Here", df.iloc[model_image,0], " ", df.iloc[model_image,1])
     prompt_name =  str(df.iloc[model_image,0]), str(df.iloc[model_image,1]) +" " +prompt_name 
     complete = ' '.join(prompt_name)
@@ -172,6 +167,6 @@ for model_image in range(len(csv_files2)):
     df.at[row_number,'Image'] = csv_files2[model_image]
     row_number += 1
 
-df.to_csv("latest_csv_feed_list.csv", sep=',')
-print("We have finished")
+df.to_csv(prompt_name, sep=',')
+print("We have finished ", prompt_name)
 browser.close()
