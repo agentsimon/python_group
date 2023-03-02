@@ -116,11 +116,11 @@ for col in df.columns:
 count_row = df.shape[0]  # Gives number of rows
 df['Country_Capital_Model'] = ""
 print("Number of rows ",count_row)
-
-#for model_image in range(count_row):
+# Put the prompt here as prompt name
+prompt_name ="central flower park"
+file_name = prompt_name
 for model_image in range(count_row):
     print(model_image)
-    prompt_name ="main airport"
     print("Here", df.iloc[model_image,0], " ", df.iloc[model_image,1])
     prompt_name =  str(df.iloc[model_image,0]), str(df.iloc[model_image,1]) +" " +prompt_name 
     complete = ' '.join(prompt_name)
@@ -160,13 +160,13 @@ print("Name of folder is", folder_to_look_in)
 csv_files = [file for file in os.listdir(folder_to_look_in) if file.endswith('.jpeg')]
 print("Unsorted list ",csv_files)
 csv_files2 =sorted(csv_files)
-print("Sorted list of pngs",csv_files2)
+print("Sorted list of files",csv_files2)
 # Loop through the rows in the dataframe
 row_number =0
 for model_image in range(len(csv_files2)):   
     df.at[row_number,'Image'] = csv_files2[model_image]
     row_number += 1
-
-df.to_csv(prompt_name, sep=',')
-print("We have finished ", prompt_name)
+file_name = file_name +",csv"
+df.to_csv(file_name, sep=',')
+print("We have finished ", file_name)
 browser.close()
