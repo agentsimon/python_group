@@ -50,7 +50,14 @@ def set_up():
     if settings_save.is_selected() == False:
         browser.execute_script("arguments[0].click();", settings_save)
     time.sleep(web_page_time)
-
+# Turn off the sound toggle
+    settings_save = browser.find_element(By.XPATH, '//*[@id="sound_toggle"]') 
+    time.sleep(web_page_time)
+# Select the Sound off option
+    if settings_save.is_selected() == True:
+        print("Here in the sound")
+        browser.execute_script("arguments[0].click();", settings_save)
+    time.sleep(web_page_time)
 # Go to the main Generate window and set up the values
     settings_button = browser.find_element("id", "tab-main")
     settings_button.click()
