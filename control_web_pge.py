@@ -76,8 +76,11 @@ def set_up():
     settings_button2 = browser.find_element("id", "stable_diffusion_model")
     time.sleep(web_page_time)
 # identify dropdown for model and select
-    select = Select(WebDriverWait(browser, 2).until(EC.element_to_be_clickable((By.ID, "stable_diffusion_model"))))
-    select.select_by_visible_text("v1-5-pruned")
+    element = browser.find_element(By.ID, 'stable_diffusion_model')
+    element.click()
+    li = browser.find_element(By.ID, 'stable_diffusion_model-model-list')
+    li.click()
+
  # identify dropdown for sampler and select
     select = Select(WebDriverWait(browser, 2).until(EC.element_to_be_clickable((By.ID, "sampler_name"))))
     select.select_by_visible_text("DPM++ 2m")
@@ -117,13 +120,13 @@ count_row = df.shape[0]  # Gives number of rows
 df['Country_Capital_Model'] = ""
 print("Number of rows ",count_row)
 # Put the prompt here as prompt name
-prompt_name ="central flower park"
+prompt_name ="The prompt"
 file_name = prompt_name
-for model_image in range(count_row):
+for model_image in range(4):
     print(model_image)
     print("Here", df.iloc[model_image,0], " ", df.iloc[model_image,1])
-    prompt_name =  str(df.iloc[model_image,0]), str(df.iloc[model_image,1]) +" " +prompt_name 
-    complete = ' '.join(prompt_name)
+    prompt_name2 =  str(df.iloc[model_image,0]), str(df.iloc[model_image,1]) +" " +prompt_name 
+    complete = ' '.join(prompt_name2)  
     print("Prompt is ", complete)
     df.at[model_image,'Title'] = complete
  # Finding the search field by id
@@ -166,7 +169,7 @@ row_number =0
 for model_image in range(len(csv_files2)):   
     df.at[row_number,'Image'] = csv_files2[model_image]
     row_number += 1
-file_name = file_name +",csv"
+file_name = file_name +".csv"
 df.to_csv(file_name, sep=',')
 print("We have finished ", file_name)
 browser.close()
