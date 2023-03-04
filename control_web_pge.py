@@ -18,6 +18,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import Select
 
 import time
 import os
@@ -53,11 +54,12 @@ def set_up():
 # Turn off the sound toggle
     settings_save = browser.find_element(By.XPATH, '//*[@id="sound_toggle"]') 
     time.sleep(web_page_time)
-# Select the Sound off option
+# Select the auto save option
     if settings_save.is_selected() == True:
         print("Here in the sound")
         browser.execute_script("arguments[0].click();", settings_save)
     time.sleep(web_page_time)
+
 # Go to the main Generate window and set up the values
     settings_button = browser.find_element("id", "tab-main")
     settings_button.click()
@@ -82,15 +84,16 @@ def set_up():
     time.sleep(web_page_time)
     settings_button2 = browser.find_element("id", "stable_diffusion_model")
     time.sleep(web_page_time)
-# identify dropdown for model and select
-    element = browser.find_element(By.ID, 'stable_diffusion_model')
-    element.click()
-    li = browser.find_element(By.ID, 'stable_diffusion_model-model-list')
-    li.click()
-
- # identify dropdown for sampler and select
-    select = Select(WebDriverWait(browser, 2).until(EC.element_to_be_clickable((By.ID, "sampler_name"))))
-    select.select_by_visible_text("DPM++ 2m")
+# identify Model dropdown for model and select V1-5-pruned
+    pick_model = browser.find_element("id", "stable_diffusion_model")
+    time.sleep(web_page_time)
+    pick_model.click()
+    options = browser.find_elements(By.XPATH, "//li[@style='display: list-item;']")
+    for option in options:
+        if option.text == "v1-5-pruned":
+            option.click()
+            break
+ 
 # Turn on fix faces toggle
     settings_save = browser.find_element(By.XPATH, '//*[@id="use_face_correction"]') 
     time.sleep(web_page_time)
@@ -127,9 +130,11 @@ count_row = df.shape[0]  # Gives number of rows
 df['Country_Capital_Model'] = ""
 print("Number of rows ",count_row)
 # Put the prompt here as prompt name
-prompt_name ="The prompt"
+prompt_name ="tea house"
+print("The prompt is ", prompt_name)
+time.sleep(3)
 file_name = prompt_name
-for model_image in range(4):
+for model_image in range(10):
     print(model_image)
     print("Here", df.iloc[model_image,0], " ", df.iloc[model_image,1])
     prompt_name2 =  str(df.iloc[model_image,0]), str(df.iloc[model_image,1]) +" " +prompt_name 
