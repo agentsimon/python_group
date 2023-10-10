@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0150)https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html?fbclid=IwAR1w7dRlr9BPku73UXEFho1NhA0YNbEQyB3ma5ekniOawbSqeQ9uaKx_BUQ#easy -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="Author" content="Dr. John Dalbey">
+  <meta name="Description" content="Miscellaneous Programming Problems">
+  <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD compaq  (Win98; U) [Netscape]">
+  <title>Programming Practice Problems</title>
+</head>
+<body>
+<br>
+<h2 align="center">Programming Practice Problems</h2>
+<div align="center"><a href="https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html?fbclid=IwAR1w7dRlr9BPku73UXEFho1NhA0YNbEQyB3ma5ekniOawbSqeQ9uaKx_BUQ#easy">Easy
+Problems</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html?fbclid=IwAR1w7dRlr9BPku73UXEFho1NhA0YNbEQyB3ma5ekniOawbSqeQ9uaKx_BUQ#moderate">Moderate
+Problems</a>&nbsp;&nbsp;&nbsp; <br>
+</div>
+<br>
+<hr size="2" width="100%">
+<h3><a name="easy"></a>Easy Problems</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +-------------------------+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¦ 34 ¦ 21 ¦ 32 ¦ 41 ¦ 25&nbsp; ¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +----+----+----+----+-----¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¦ 14 ¦ 42 ¦ 43 ¦ 14 ¦ 31&nbsp; ¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +----+----+----+----+-----¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¦ 54 ¦ 45 ¦ 52 ¦ 42 ¦ 23&nbsp; ¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +----+----+----+----+-----¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¦ 33 ¦ 15 ¦ 51 ¦ 31 ¦ 35&nbsp; ¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +----+----+----+----+-----¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¦ 21 ¦ 52 ¦ 33 ¦ 13 ¦ 23&nbsp; ¦<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +-------------------------+</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+1. Do you like treasure hunts? In this problem you are to write a
+program to explore the above array for a treasure. The values in the
+array are clues. Each cell contains an integer between 11 and 55; for
+each value the ten's digit represents the row number and the unit's
+digit represents the column number of the cell containing the next
+clue. Starting in the upper left corner (at 1,1), use the clues to
+guide your search of the array. (The first three clues are 11, 34, 42).
+The treasure is a cell whose value is the same as its coordinates. Your
+program must first read in the treasure map data into a 5 by 5 array.
+Your program should output the cells it visits during its search, and a
+message indicating where you found the treasure.<br>
+<br>
+<br>
+2. Write a program to search for the "saddle points" in a 5 by 5 array
+of integers. A saddle point is a cell whose value is 
+greater than or equal to any in its row,
+and less than or equal to any 
+in its column. There may be more than one 
+saddle point in the array. Print out the
+coordinates of any saddle points your program finds.
+Print out "No saddle points" if there are none.<br>
+<br>
+3. In the game of chess, a queen can attack pieces which are on the
+same row, column, or diagonal. A chessboard can be represented by an 8
+by 8 array. A 1 in the array represents a queen on the corresponding
+square, and a O in the array represents an unoccupied square. Your
+program is to read the location of two queens and then update the array
+appropriately.&nbsp; Then process the board and indicate whether or not
+the two queens are positioned so that they attack each other. <br>
+<br>
+4.&nbsp; One classic method for composing secret messages is called a
+square code.&nbsp; The spaces are removed from the english text <br>
+and the characters are written into a square (or rectangle).&nbsp; For
+example, the sentence "If man was meant to stay on the <br>
+ground god would have given us roots" is 54 characters long, so it is
+written into a rectangle with 7 rows and 8 columns. <br>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ifmanwas<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; meanttos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tayonthe<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundgo<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dwouldha<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vegivenu<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sroots<br></pre>
+The coded message is obtained by reading down the columns going left to
+right.&nbsp;&nbsp; For example, the message above is coded as:<br>
+<br>
+<tt>imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn&nbsp; sseoau</tt><br>
+<br>
+In your program, have the user enter a message in english with no
+spaces between the words.&nbsp; Have the maximum message length be 81 <br>
+characters.&nbsp; Display the encoded message. (Watch out that no
+"garbage" characters are printed.)&nbsp;&nbsp;&nbsp; Here are some more
+examples:<br>
+<pre>&nbsp;Input&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output<br>haveaniceday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hae and via ecy<br>feedthedog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fto ehg ee&nbsp; dd<br>chillout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clu hlt io<br></pre>
+<br>
+<br>
+5.&nbsp;&nbsp; The results from the mayor's race have been reported by
+each precinct as follows:<br>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Candidate&nbsp; Candidate&nbsp; Candidate&nbsp; Candidate<br>
+Precinct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<br>
+&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+206&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 37<br>
+&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+147&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21<br>
+&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+186&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+121&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 38<br>
+&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+114&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+408&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39<br>
+&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+267&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+382&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29<br>
+</tt><br>
+Write a program to do the following:<br>
+<br>
+a. Read the raw vote totals from a data file that contains one row for
+each precinct.<br>
+<br>
+b. Display the table with appropriate headings for the rows and columns.<br>
+<br>
+c. Compute and display the total number of votes received by each
+candidate and<br>
+the percent of the total votes cast.<br>
+<br>
+d. If any one candidate received over 50% of the votes, the program
+should print<br>
+&nbsp;a message declaring that candidate the winner.<br>
+<br>
+e. If no candidate received 50% of the votes, the program should print
+a message<br>
+declaring a run-off between the two candidates receiving the highest
+number of<br>
+votes; the two candidates should be identified by their letter names.<br>
+<br>
+f. For testing, run the program with the above data, and also with
+another<br>
+&nbsp;&nbsp; data file where Candidate C receives only 108 votes in
+precinct 4.<br>
+<br>
+<br>
+<hr size="2" width="100%">&nbsp;<br>
+<h3><a name="moderate"></a>Moderate Problems</h3>
+<br>
+Write a program to find all the sentences, or consecutive sequence of
+sentences, in a text file where:&nbsp; min &lt;= length &lt;= max.<br>
+Assume that a sentence ends in a period, question mark, or exclamation
+point.<br>
+In the special case of quoted sentences (that begin with quotes or an
+apostrophe), include the terminating quote mark or apostrophe.<br>
+Count all blanks and punctuation, but assume only one blank between
+sentences.<br>
+(All EOL characters should be converted to blanks).<br>
+Precondition: Min and Max will be positive integers less than 1000, and
+Min &lt;= Max.<br>
+The name of the text file is to be provided as a command line argument
+(not read from Standard Input).<br>
+<br>
+For example, given this text:<br>
+<tt>Black is white.&nbsp; Day is night.&nbsp; Understanding is
+ignorance.<br>
+Truth is fiction.&nbsp; Safety is danger.<br>
+</tt><br>
+If min = max = 16 then the output is <br>
+&nbsp;&nbsp;&nbsp; "<tt>Black is white.</tt>"<br>
+If min = max = 18 then the output is <br>
+&nbsp;&nbsp;&nbsp; "<tt>Truth is fiction.</tt>"<br>
+<tt>&nbsp; "Safety is danger.</tt>"<br>
+If min = 30 and max = 37 then the output is <br>
+&nbsp;&nbsp;&nbsp; "<tt>Truth is fiction.</tt><tt> Safety is danger.</tt>"<br>
+because the two sentences are consecutive sentences with the desired
+length.<br>
+<br>
+Here is a sample text file for <a href="https://users.csc.calpoly.edu/~jdalbey/103/Projects/AliceInWonderland.txt">Alice
+in Wonderland</a>.<br>
+<br>
+<br>
+<hr size="2" width="100%"><br>
+<p><font face="Garamond">1.&nbsp; Write a program to convert roman
+numerals into
+their arabic equivalent.</font>
+</p>
+<p><font face="Garamond">INPUT REQUIREMENTS</font>
+</p>
+<p><font face="Garamond">Read one or more roman numerals from standard
+input. Process one line at a time. Each input line contains only one
+roman
+numeral, starting in column one. Assume the characters are all upper
+case
+with no embedded blanks.</font>
+</p>
+<p><font face="Garamond">OUTPUT REQUIREMENTS</font>
+</p>
+<p><font face="Garamond">The arabic equivalent of each input roman
+numeral
+is displayed on standard output, starting in column one.</font>
+</p>
+<p><font face="Garamond">FUNCTIONAL REQUIREMENTS</font>
+</p>
+<p><font face="Garamond">Here are the arabic equivalents for roman
+symbols:</font>
+</p>
+<p><font face="Garamond">The "basic" roman
+symbols&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The "auxiliary" roman symbols</font>
+<br>
+&nbsp;
+</p>
+<blockquote><font face="Garamond">I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+V&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D</font>
+  <p><font face="Garamond">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp;&nbsp;
+100&nbsp;&nbsp;&nbsp;
+1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; 500</font></p>
+</blockquote>
+<p><br>
+<font face="Garamond">Convert the roman numeral to arabic processing
+the symbols from left to right according to the following rules:</font>
+</p>
+<dir><font face="Garamond">1. A symbol following one of greater or
+equal
+value <b>adds</b> to its value. (E.g., XII = 12)</font>
+<br>
+<font face="Garamond">2. A symbol preceding one of greater value <b>subtracts</b>
+its value.(E.g., IV = 4; XL = 40)</font></dir>
+<p><br>
+<font face="Garamond">ERROR HANDLING REQUIREMENTS</font>
+</p>
+<p><font face="Garamond">In each of the error conditions below, display
+the given message and skip the numeral and continue processing the next
+line.</font>
+</p>
+<p><font face="Garamond">"Invalid character in input. Valid characters
+are I,V,X,L,C,D,M."</font>
+</p>
+<dir>
+<dir><font face="Garamond">Only the listed characters are valid.</font></dir>
+</dir>
+<font face="Garamond">"Invalid numeral: can't subtract auxiliary
+symbol."</font>
+<dir>
+<dir><font face="Garamond">It is not permitted to subtract an
+"auxiliary"
+symbol. (CML, not LM = 950; XLV not VL, = 45).</font></dir>
+</dir>
+<font face="Garamond">"Invalid numeral: two consecutive subtractions."</font>
+<dir>
+<dir><font face="Garamond">Can't do two subtractions in a row, thus
+LIVX
+is illegal.</font></dir>
+</dir>
+<font face="Garamond">"Invalid numeral: additions don't decrease."</font>
+<dir>
+<dir><font face="Garamond">Additions must decrease, as you go from left
+to right. Thus, each symbol added must have a value equal or less than
+the last symbol which was added. Thus, LIIX is wrong, cause we added L,
+added I, subtracted I, then try to add X.</font></dir>
+</dir>
+<hr size="2" width="100%">
+<h3><a name="PhoneWords"></a>Phone "words"</h3>
+Each number on the telephone dial (except 0 and 1) corresponds to three
+alphabetic characters. Those correspondences are:
+<pre>&nbsp;2 ABC&nbsp;&nbsp;<br>&nbsp;3 DEF&nbsp;&nbsp;<br>&nbsp;4 GHI&nbsp;&nbsp;<br>&nbsp;5 JKL&nbsp;<br>&nbsp;6 MNO&nbsp;<br>&nbsp;7 PRS&nbsp;<br>&nbsp;8 TUV&nbsp;<br>&nbsp;9 WXY</pre>
+Given a seven digit telephone number, print all 2187 possible "words"
+that
+number spells. (They may not be real english words, but just some
+sequence
+of characters). Since the digits 0 and 1 have no alphabetic equivalent,
+an input number which contains those digits should be rejected. The
+input
+will be one or more seven digit integers from standard input.
+<p>The problem can be made a bit more challenging by outputting more
+than
+one word per line. Usually about seven words will fit on a line.
+</p>
+<hr>
+<h3><a name="LetterPairs"></a>Frequency of letter pairs</h3>
+Write a program to count the occurrences of all letter pairs in a
+sample
+of text (like the first paragraph of the Constitution). Disregard
+differences
+between lower and upper case letters. (Blanks are not considered as
+letters).
+Output the 100 most frequent letter pairs, in order by percent of
+total.
+Also show which percent of total pairs is accounted for by this list of
+100. Your program should correctly process situations where the input
+file
+is empty or where less than 100 pairs occur.
+<p>&nbsp;Sample output
+</p>
+<pre>th 2.37%&nbsp;&nbsp;&nbsp;&nbsp; in 2.20%&nbsp;&nbsp;&nbsp;&nbsp; fj 2.00%&nbsp; ...&nbsp; (6 per line)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (100 letter pairs)<br><br>Output represents 73.44% of 23641 letter pairs.</pre>
+<hr>
+<h3><a name="Subwords"></a>Computing "subword" combinations.</h3>
+<p><br>
+Accept any number of lines of input entered from standard input.
+A valid line contains a word and a number. The word comes first, and is
+up to twenty alphabetic characters (A-Z) in upper or lower case. The
+word
+may be preceeded and followed by any number of blanks. The number is a
+decimal integer greater than zero, and may be followed by any number of
+blanks or a return. Input is terminated by EOF character. For each
+input
+word, print all possible "subwords" that have as many characters as
+specified
+by the number. A "subword" is a n-letter word comprised of only
+characters
+that are found in the given word. If you are familiar with the game
+Scrabble,
+it's as though the input word is your pool of letters, and you want to
+find all possible arrangements of n letters from your pool. .nf For
+example,
+CAT 2 would produce CA CT AC AT TA TC and DOG 1 would produce D O G and
+BIRD 3 would produce BIR BID IRD RID DIR RIB ... Note, that we are
+producing
+combinations WITHOUT replacement, so in the BIRD 3 example, BBB and RRR
+are NOT possible subwords. The output should echo the input line to
+standard
+output, followed by the list of subwords, one word per line, left
+justified.
+Each set of output words should be followed by one blank line. The
+program
+should respond to invalid input by echoing the input line to the
+output,
+and then issuing a one line message indicating the nature of the error:
+</p>
+<dir>
+<dir>&nbsp;"Illegal character in word"
+<p>&nbsp;"Illegal character in number"
+</p>
+<p>&nbsp;"Number greater than length of word"
+</p>
+<p>&nbsp;"Word longer than 20 characters"</p>
+</dir>
+</dir>
+After issuing the message, processing should resume with the next input
+line. When all input has been processed, issue a message indicating the
+number of input words that were processed (including word with errors)
+e.g., "End of input encountered, 4 words processed."
+<hr width="100%">
+<h3><a name="BowlingScores"></a>Calculating bowling match scores</h3>
+<p><br>
+A bowling match consists of ten frames. Each frame except for the
+tenth consists of one or two balls, or attempts to knock down the ten
+pins
+at the end of the alley. Doing so on the first ball of the frame is
+called
+a strike, and the second ball of the frame is not rolled. Knocking down
+all ten pins with both balls (having left some up with the first ball)
+is called a spare. If both attempts to knock down the pins leave some
+standing,
+the frame is called an open frame. A spare in the tenth frame gives the
+bowler one extra ball; a strike in the tenth gives him or her two extra
+balls. A bowling score is computed as follows. A strike counts as 10
+points
+plus the sum of the next two balls. A spare counts as 10 points plus
+the
+next ball. Any other balls merely count as themselves, as do any bonus
+balls rolled as a result of a strike or a spare in the tenth frame.
+Suppose
+for example that the sequence of balls was
+</p>
+<pre>9 1&nbsp;&nbsp; 0 10&nbsp;&nbsp; 10&nbsp;&nbsp; 10&nbsp;&nbsp; 6 2&nbsp;&nbsp; 7 3&nbsp;&nbsp; 8 2&nbsp;&nbsp; 10&nbsp;&nbsp; 9 0&nbsp;&nbsp; 9 1&nbsp;&nbsp; 10</pre>
+The score for the ten frames would be
+<pre>Frame&nbsp;&nbsp; score<br>-----&nbsp;&nbsp; -----&nbsp;<br>&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;<br>&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;<br>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 56&nbsp;<br>&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 74&nbsp;<br>&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 82&nbsp;<br>&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;<br>&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 120&nbsp;<br>&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 139&nbsp;<br>&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 148&nbsp;<br>&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp; 168<br><br><br><br></pre>
+Write a program to accept from standard input the scores for a sequence
+of balls and output the scores for the ten frames. There may be
+multiple
+lines of input, where each input line will be the scores for one
+player.
+The scores will be separated by one or more blanks. You may assume that
+the number of scores on the line is valid.
+<br>
+&nbsp;
+<hr size="2" width="100%">
+<h3 align="left"> Lotto Guesser
+</h3>
+<p>Cobbletown has a lottery (a small version of California's Lotto) in
+which players guess four number between 1 and 9. Larry likes to play
+and thinks he has a scheme to pick winning numbers. He keeps a history
+of past winning numbers in a text data file. Larry thinks that if a
+number hasn't occurred recently then it is more likely to show up as a
+winner. (Obviously Larry isn't familiar with the statistical fact that
+each number has an equal likelihood of being picked, since each week's
+drawing is an independent event). Larry wants us to write a program to
+assist him in his wacky scheme.</p>
+<p>INPUT REQUIREMENTS</p>
+<dir>
+<p> The lotto history data: a file of unknown length, with four
+integers per line. Each integer is in the range 1 to 9.</p>
+</dir>
+<p>OUTPUT REQUIREMENTS</p>
+<dir>
+<p> 1. The four least frequently occurring integers in the history
+data. (That is, counting all the weeks, the four numbers that appeared
+fewer times than any others).</p>
+<p> 2. The one integer with longest time since last occurrence. (That
+is, if you count backward from now, the number for which you count the
+most weeks since it occurred).</p>
+</dir>
+<p>FUNCTIONAL REQUIREMENTS</p>
+<p> (You may assume that no data validity checking is required).</p>
+<dir>
+1. Determine and display the four integers which occur least often in
+the history data.
+<p> Note: To make the problem easier, if there is a tie between two or
+more numbers for fourth place, it doesn't matter which one is printed.</p>
+<p>2. Determine and display the integer which has gone the longest
+without appearing in a winning sequence.</p>
+</dir>
+<p>At a minimum your program must work correctly for the following
+sample data.</p>
+<pre><p>	Test Data</p><br><p>1 2 3 4</p><br><p>5 6 7 8</p><br><p>8 7 6 5</p><br><p>1 5 6 7</p><br><p>4 3 2 1</p><br><br></pre>
+<p class="navy"><span style="color: rgb(0, 128, 0);"></span></p>
+<p></p>
+<hr size="2" width="100%">
+<a name="castles"></a>
+<h3 align="left"> Castles and Creatures</h3>
+<p>
+<table width="60%"><tbody><tr><td>
+Write a program to play a simple "adventure"-style
+interactive game.  The adventure world consists of up to five
+castles each of which has up to seven rooms (35 total).
+Each room has a treasure, worth a certain number of points, and
+a creature guarding the treasure.  
+The treasure can be captured by bluffing or fighting
+the creature.  Bluffing always has a 30% chance of succeeding.
+The odds for winning a fight vary from creature to 
+creature. 
+The object of the game is to visit different
+rooms and gain as many treasure points 
+as possible.  The player begins
+with 9 lives and each fight lost costs a life.
+(There's no penalty for losing a bluff.)
+When all the lives (or all treasures) are gone
+the game ends.
+The adventure world information
+(like castle and room names)
+is stored in a text file.
+The program must read the text file
+and create a data structure to represent the world.
+(HINT: Use a record structure for each room.)
+The program must handle interaction with
+the player, including display of menus for
+castle and room choices, display of current lives
+and treasure points accumulated, and
+responding to one-character commands to
+fight, bluff, or move around the world.
+
+</td></tr>
+</tbody></table>
+
+
+</p>
+<hr size="2" width="100%">
+<a name="sudoku"></a>
+<h3 align="left"> Sudoku Solver </h3>
+<p>
+<a href="https://pdf.yt/d/yavqBDrSRskNORT_">
+Sudoku Solver assignment</a>
+<br>
+<br>
+</p><hr>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p><!-- Begin Last Modified Section for Cuesta Server -->
+<script language="JavaScript" type="text/javascript">dateMod=document.lastModified; document.write(" Last modified on "); document.write(dateMod);</script> Last modified on 05/29/2023 09:05:37Last
+modified on 05/13/2001 12:36:16
+<!-- End of Last Modified section --></p>
+
+
+</body></html>
