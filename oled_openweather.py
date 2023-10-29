@@ -9,8 +9,8 @@ from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
 # airvisualapi_key = "your_airvisual_api_key"
 # openweatherapi_key = "your_openweather_api_key"
-airvisualapi_key = "f2061154-78a8-4b66-92c0-776e5a8a45fa" #https://www.iqair.com/vietnam/da-nang  create an account
-openweatherapi_key = "a68a0ee8420eb5ffcb2a5ce643107da7" #https://openweathermap.org/api  create an account
+airvisualapi_key = "Your_key" #https://www.iqair.com/vietnam/da-nang  create an account
+openweatherapi_key = "Your_key" #https://openweathermap.org/api  create an account
 
 # Create the I2C interface.
 i2c = busio.I2C(SCL, SDA)
